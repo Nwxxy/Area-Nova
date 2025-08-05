@@ -17,14 +17,17 @@ export default function Home() {
             <Leaf className="w-10 h-10 text-secondary" />
             <h1 className="text-4xl lg:text-5xl font-bold font-headline text-foreground">Saboaria da Vó Rita</h1>
         </div>
-        <p className="text-muted-foreground text-lg">
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           Sua jornada no mundo da saboaria artesanal começa aqui.
+        </p>
+        <p className="text-primary font-semibold text-xl mt-4">
+          Parabéns pela sua compra! Prepare-se para lucrar com a saboaria artesanal.
         </p>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-8 lg:py-12 fade-in">
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 font-headline">Módulos Essenciais</h2>
+          <h2 className="text-3xl font-bold mb-6 font-headline">Video Aula Completa</h2>
           <Carousel
             opts={{
               align: 'start',
