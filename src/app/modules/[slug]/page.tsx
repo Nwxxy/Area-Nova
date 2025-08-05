@@ -15,12 +15,12 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import React, { useState, useMemo, useEffect } from 'react';
-import type { Lesson } from '@/lib/types';
+import type { Lesson, ContentItem } from '@/lib/types';
 
 
 export default function ModulePage({ params }: { params: { slug: string } }) {
   const allContent = [...modules, ...bonusContent];
-  const item = allContent.find((i) => i.slug === params.slug);
+  const item = allContent.find((i) => i.slug === params.slug) as ContentItem | undefined;
   
   const [lessonsState, setLessonsState] = useState(item?.lessons || []);
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
@@ -121,6 +121,8 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
     );
   };
 
+  const isBonus = item.type === 'bonus';
+
   return (
     <div className="min-h-screen bg-background text-foreground fade-in">
        <header className="py-3 px-4 md:px-8 flex items-center justify-between border-b border-accent/30 sticky top-0 bg-background/80 backdrop-blur-sm z-10">
@@ -141,66 +143,88 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
         )}
       </header>
       <main className="container mx-auto px-4 py-8 lg:py-12">
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          
-          <div className="lg:col-span-2">
-             <div className="mb-8">
-              <div className="aspect-video relative rounded-xl overflow-hidden mb-2 shadow-lg bg-slate-200">
+        {isBonus ? (
+            <div className="max-w-7xl mx-auto">
+              <div className="aspect-video relative rounded-xl overflow-hidden mb-4 shadow-lg bg-slate-200 h-[calc(100vh-200px)]">
                 {renderContent()}
               </div>
-              {selectedLesson && (
-                 <div className="flex justify-between items-center">
-                    <h2 className="text-2xl font-bold">{selectedLesson.title}</h2>
+              <div className="flex justify-between items-center mb-6">
+                  {selectedLesson && <h2 className="text-2xl font-bold">{selectedLesson.title}</h2>}
+                  <div className="flex-grow"></div>
+                   {selectedLesson && (
                     <Button onClick={() => handleMarkAsCompleted(selectedLesson.id)}>
                         {selectedLesson.completed ? <CheckCircle className="mr-2" /> : <PlayCircle className="mr-2" />}
-                        {selectedLesson.completed ? 'Marcar como não concluída' : 'Marcar como concluída'}
+                        {selectedLesson.completed ? 'Concluído' : 'Marcar como concluído'}
                     </Button>
-                 </div>
-              )}
+                   )}
+              </div>
+              <div>
+                  <h2 className="text-2xl font-bold font-headline mb-4">Descrição do Conteúdo</h2>
+                  <p className="text-muted-foreground">{item.description}</p>
+              </div>
             </div>
-             <div>
-                <h2 className="text-2xl font-bold font-headline mb-4">Descrição do Módulo</h2>
-                <p className="text-muted-foreground">{item.description}</p>
-             </div>
-          </div>
-          
-          <div className="lg:col-span-1">
-            <h2 className="text-2xl font-bold font-headline mb-4">Aulas do Módulo</h2>
-             <div className="flex items-center gap-4 mb-4">
-                <Progress value={progress} className="h-2 w-full" />
-                <span className="text-sm font-medium text-muted-foreground">{progress}% completo</span>
+        ) : (
+          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            
+            <div className="lg:col-span-2">
+               <div className="mb-8">
+                <div className="aspect-video relative rounded-xl overflow-hidden mb-2 shadow-lg bg-slate-200">
+                  {renderContent()}
+                </div>
+                {selectedLesson && (
+                   <div className="flex justify-between items-center">
+                      <h2 className="text-2xl font-bold">{selectedLesson.title}</h2>
+                      <Button onClick={() => handleMarkAsCompleted(selectedLesson.id)}>
+                          {selectedLesson.completed ? <CheckCircle className="mr-2" /> : <PlayCircle className="mr-2" />}
+                          {selectedLesson.completed ? 'Marcar como não concluída' : 'Marcar como concluída'}
+                      </Button>
+                   </div>
+                )}
+              </div>
+               <div>
+                  <h2 className="text-2xl font-bold font-headline mb-4">Descrição do Módulo</h2>
+                  <p className="text-muted-foreground">{item.description}</p>
+               </div>
             </div>
-            <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
-              <AccordionItem value="item-1" className="border rounded-lg">
-                 <AccordionTrigger className="p-4 text-lg hover:no-underline">
-                    <div className="flex items-center gap-4 text-left">
-                        <span>{item.title}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-1 pb-2">
-                    <ul className="flex flex-col gap-1">
-                      {lessonsState.map((lesson, index) => (
-                        <li key={lesson.id}>
-                          <button 
-                            onClick={() => handleLessonClick(lesson)}
-                            className={`w-full text-left p-3 rounded-md transition-colors flex items-center gap-3 ${selectedLesson?.id === lesson.id ? 'bg-primary/20 text-primary-foreground' : 'hover:bg-accent'}`}>
-                            
-                            {lesson.completed ? (
-                              <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                            ) : (
-                              (lesson.type === 'pdf' ? <FileText className="h-5 w-5 text-primary flex-shrink-0" /> : <PlayCircle className="h-5 w-5 text-primary flex-shrink-0" />)
-                            )}
-                            <span>Aula {index + 1}: {lesson.title}</span>
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
+            
+            <div className="lg:col-span-1">
+              <h2 className="text-2xl font-bold font-headline mb-4">Aulas do Módulo</h2>
+               <div className="flex items-center gap-4 mb-4">
+                  <Progress value={progress} className="h-2 w-full" />
+                  <span className="text-sm font-medium text-muted-foreground">{progress}% completo</span>
+              </div>
+              <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
+                <AccordionItem value="item-1" className="border rounded-lg">
+                   <AccordionTrigger className="p-4 text-lg hover:no-underline">
+                      <div className="flex items-center gap-4 text-left">
+                          <span>{item.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-1 pb-2">
+                      <ul className="flex flex-col gap-1">
+                        {lessonsState.map((lesson, index) => (
+                          <li key={lesson.id}>
+                            <button 
+                              onClick={() => handleLessonClick(lesson)}
+                              className={`w-full text-left p-3 rounded-md transition-colors flex items-center gap-3 ${selectedLesson?.id === lesson.id ? 'bg-primary/20 text-primary-foreground' : 'hover:bg-accent'}`}>
+                              
+                              {lesson.completed ? (
+                                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                              ) : (
+                                (lesson.type === 'pdf' ? <FileText className="h-5 w-5 text-primary flex-shrink-0" /> : <PlayCircle className="h-5 w-5 text-primary flex-shrink-0" />)
+                              )}
+                              <span>Aula {index + 1}: {lesson.title}</span>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
 
-        </div>
+          </div>
+        )}
       </main>
     </div>
   );

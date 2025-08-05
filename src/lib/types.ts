@@ -16,4 +16,5 @@ export interface ContentItem {
   slug: string;
   progress: number;
   lessons: Lesson[];
+  type: 'module' | 'bonus';
 }

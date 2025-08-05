@@ -8,6 +8,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'comece-por-aqui',
     progress: 0,
+    type: 'module',
     lessons: [
       { id: 1, title: 'O que é Saboaria Artesanal?', url: 'https://www.youtube.com/watch?v=yk6sqafus0Q', completed: false, type: 'video' },
       { id: 2, title: 'Tipos de Bases e Essências', url: 'https://www.youtube.com/watch?v=ijO5hZSOZB0', completed: false, type: 'video' },
@@ -23,6 +24,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'erros-comuns-na-saboaria',
     progress: 0,
+    type: 'module',
     lessons: [
       { id: 1, title: 'Introdução aos Erros Comuns na Saboaria', url: 'https://www.youtube.com/watch?v=x39O0bFVcqM', completed: false, type: 'video' },
       { id: 2, title: 'Ponto Certo da Base e Uso Correto das Essências', url: 'https://www.youtube.com/watch?v=KFG01L1nJOo', completed: false, type: 'video' },
@@ -37,6 +39,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'seu-primeiro-sabonete',
     progress: 0,
+    type: 'module',
     lessons: [
         { id: 1, title: 'Mão na Massa!', url: 'https://www.youtube.com/watch?v=vo0lwzl2aXA', completed: false, type: 'video' },
         { id: 2, title: 'Desenformando o Sabonete', url: 'https://www.youtube.com/watch?v=JRXCk7Uc8k4', completed: false, type: 'video' },
@@ -50,6 +53,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonetes-decorativos',
     progress: 0,
+    type: 'module',
     lessons: [
         { id: 1, title: 'Introdução', url: 'https://www.youtube.com/watch?v=KNVkPdK55d8', completed: false, type: 'video' },
         { id: 2, title: 'Fazendo o Sabonete Decorativo', url: 'https://www.youtube.com/watch?v=4NXL5wPwhCQ', completed: false, type: 'video' },
@@ -64,6 +68,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonetes-para-lembrancinhas',
     progress: 0,
+    type: 'module',
     lessons: [
         { id: 1, title: 'Introdução', url: 'https://www.youtube.com/watch?v=P8pktqeEpvQ', completed: false, type: 'video' },
         { id: 2, title: 'Fazendo Nosso Sabonete', url: 'https://www.youtube.com/watch?v=AylWaIgu778', completed: false, type: 'video' },
@@ -78,6 +83,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonete-esfoliante',
     progress: 0,
+    type: 'module',
     lessons: [
         { id: 1, title: 'Introdução', url: 'https://www.youtube.com/watch?v=Osr2NNhg4YQ', completed: false, type: 'video' },
         { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/watch?v=biKY2p7dHrU', completed: false, type: 'video' },
@@ -92,6 +98,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonete-de-frutas',
     progress: 0,
+    type: 'module',
     lessons: [
         { id: 1, title: 'Introdução', url: 'https://www.youtube.com/watch?v=mCfs8uxxdGA', completed: false, type: 'video' },
         { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/watch?v=VaTMghE8Ugk', completed: false, type: 'video' },
@@ -106,6 +113,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonete-fito-energetico',
     progress: 0,
+    type: 'module',
     lessons: [
       { id: 1, title: 'Introdução', url: 'https://www.youtube.com/watch?v=CeSBrDagGRs', completed: false, type: 'video' },
       { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/watch?v=1Licryb1ik4', completed: false, type: 'video' },
@@ -121,6 +129,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonete-terapeutico',
     progress: 0,
+    type: 'module',
     lessons: [
         { id: 1, title: 'Introdução', url: 'https://www.youtube.com/watch?v=vfwcQQLlhog', completed: false, type: 'video' },
         { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/watch?v=Uf55mYcFb1Y', completed: false, type: 'video' },
@@ -135,6 +144,7 @@ export const modules: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonete-vegano',
     progress: 0,
+    type: 'module',
     lessons: [
       { id: 1, title: 'Introdução', url: 'https://www.youtube.com/watch?v=u-NMGjMpDCg', completed: false, type: 'video' },
       { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/watch?v=_lqbshzHVEg', completed: false, type: 'video' },
@@ -152,6 +162,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'saboaria-lucrativa',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Saboaria Lucrativa', url: 'https://drive.google.com/file/d/1hdxNYcYyD7j2bH1xUKPzE7rtBauCDJxo/preview', completed: false, type: 'pdf' },
     ],
@@ -163,6 +174,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'divulgacoes-e-vendas',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Divulgações e Vendas', url: 'https://drive.google.com/file/d/1sQxHZMRXdVSHltpVCEHR1u54czbMeY8z/preview', completed: false, type: 'pdf' },
     ],
@@ -174,6 +186,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'etiquetas-pra-imprimir',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Etiquetas Pra Imprimir', url: 'https://drive.google.com/file/d/12i-prpvmCs6SyFoXao7oMB0ub7BC_4vF/preview', completed: false, type: 'pdf' },
     ],
@@ -185,6 +198,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'robo-de-precificacao',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Robô de Precificação', url: 'https://drive.google.com/file/d/1tYBlDlFMq-EcxPOgHa2HN-v2TeeE7JVD/preview', completed: false, type: 'pdf' },
     ],
@@ -196,6 +210,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'produtos-para-pets',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Produtos For Pets', url: 'https://drive.google.com/file/d/1QewdEi8b4joOJy3BSC4cL9--WiXCuAnl/preview', completed: false, type: 'pdf' },
     ],
@@ -207,6 +222,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'receitas-de-condicionador',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Receitas de Condicionador', url: 'https://drive.google.com/file/d/1qjhn1W_cwpGwT6RKJPsvrgnzKWXCntYP/preview', completed: false, type: 'pdf' },
     ],
@@ -218,6 +234,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'lista-de-fornecedores',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Lista de Fornecedores', url: 'https://drive.google.com/file/d/1IyEoho-fV98ee9lkWMRrCUZKuXZUZNOO/preview', completed: false, type: 'pdf' },
     ],
@@ -229,6 +246,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'lista-de-materiais-da-vo-rita',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Lista de Materiais da Vó Rita', url: 'https://drive.google.com/file/d/1o0qTMKgpO4CJOFEdybTGL-P2IpHztCl3/preview', completed: false, type: 'pdf' },
     ],
@@ -240,6 +258,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'saboaria-de-sucesso',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Saboaria de Sucesso', url: 'https://drive.google.com/file/d/1R1TkyqlKiILwiG8-tUhohJYIUBGg5xXO/preview', completed: false, type: 'pdf' },
     ],
@@ -251,6 +270,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'receitas-de-cremes-hidratantes',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Receitas de Cremes Hidratantes', url: 'https://drive.google.com/file/d/1kmveu7k-z9IaQKXH9IsP1yOe20YgEiF-/preview', completed: false, type: 'pdf' },
     ],
@@ -262,6 +282,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'desodorantes-naturais',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Desodorantes Naturais', url: 'https://drive.google.com/file/d/1_c_evEXyx5IveuYEVIHwN8wJVc4olDye/preview', completed: false, type: 'pdf' },
     ],
@@ -273,6 +294,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonete-liquido',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Sabonete Liquido', url: 'https://drive.google.com/file/d/1W08VYOn8N4u5SWtaKqfl5r9pGpyTiIao/preview', completed: false, type: 'pdf' },
     ],
@@ -284,6 +306,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'shampoo-artesanal',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Shampoo Artesanal', url: 'https://drive.google.com/file/d/1OVjbWQfp7dysEXQWiAZZfLm534aAzadJ/preview', completed: false, type: 'pdf' },
     ],
@@ -295,6 +318,7 @@ export const bonusContent: ContentItem[] = [
     image: 'https://placehold.co/600x400',
     slug: 'sabonetes-de-frutas-bonus',
     progress: 0,
+    type: 'bonus',
     lessons: [
       { id: 1, title: 'Sabonetes de Frutas', url: 'https://drive.google.com/file/d/1HJuw-TFZVTj7JLNox32RkGZSOPZ0DCYn/preview', completed: false, type: 'pdf' },
     ],
