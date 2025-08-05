@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/carousel';
 import { ModuleCard } from '@/components/ModuleCard';
 import { modules, bonusContent } from '@/lib/data';
-import { Leaf, Mail, Phone } from 'lucide-react';
+import { Leaf, Mail, Phone, Heart } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -74,26 +74,50 @@ export default function Home() {
         </section>
       </main>
       
-       <footer className="bg-background border-t border-accent/30 mt-12 py-8">
-          <div className="container mx-auto px-4 text-center text-muted-foreground">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="flex flex-col gap-2 items-center md:items-start">
-                <h3 className="font-semibold text-foreground text-lg">Contato</h3>
-                <div className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Mail className="h-4 w-4" />
-                  <a href="mailto:saboariadavorita@gmail.com">saboariadavorita@gmail.com</a>
-                </div>
-                <div className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Phone className="h-4 w-4" />
-                  <a href="tel:+5561981913790">+55 61 98191-3790</a>
-                </div>
+       <footer className="bg-background border-t border-accent/30 mt-16">
+          <div className="container mx-auto px-4 py-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+              
+              <div className="flex flex-col items-center md:items-start">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <Leaf className="w-6 h-6 text-secondary" />
+                    <h2 className="text-2xl font-bold font-headline text-foreground">Saboaria da Vó Rita</h2>
+                  </div>
+                  <p className="text-muted-foreground text-sm max-w-xs">Feito com amor e ingredientes naturais, para cuidar de você e do planeta.</p>
               </div>
-              <div className="text-center">
-                 <p className="text-sm">&copy; {new Date().getFullYear()} Saboaria da Vó Rita. Todos os direitos reservados.</p>
-                 <Link href="/termos" className="text-sm hover:text-primary underline-offset-4 hover:underline">
-                    Termos de Uso e Política de Privacidade
-                  </Link>
+
+              <div>
+                <h3 className="font-semibold text-foreground text-lg mb-3">Contato</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                   <li>
+                     <a href="mailto:saboariadavorita@gmail.com" className="flex items-center justify-center md:justify-start gap-2 hover:text-primary transition-colors">
+                        <Mail className="h-4 w-4" />
+                        <span>saboariadavorita@gmail.com</span>
+                      </a>
+                   </li>
+                   <li>
+                     <a href="tel:+5561981913790" className="flex items-center justify-center md:justify-start gap-2 hover:text-primary transition-colors">
+                        <Phone className="h-4 w-4" />
+                        <span>+55 61 98191-3790</span>
+                      </a>
+                   </li>
+                </ul>
               </div>
+
+               <div>
+                <h3 className="font-semibold text-foreground text-lg mb-3">Legal</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                   <li>
+                      <Link href="/termos" className="text-sm hover:text-primary underline-offset-4 hover:underline">
+                        Termos de Uso e Política de Privacidade
+                      </Link>
+                   </li>
+                </ul>
+              </div>
+
+            </div>
+            <div className="mt-8 pt-6 border-t border-accent/30 text-center text-muted-foreground text-sm">
+              <p>&copy; {new Date().getFullYear()} Saboaria da Vó Rita. Todos os direitos reservados.</p>
             </div>
           </div>
         </footer>
