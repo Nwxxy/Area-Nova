@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { modules, bonusContent } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, PlayCircle, CheckCircle, Lock } from 'lucide-react';
+import { ArrowLeft, PlayCircle, CheckCircle, FileText } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -23,19 +23,20 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
   const item = allContent.find((i) => i.slug === params.slug);
   
   const [lessonsState, setLessonsState] = useState(item?.lessons || []);
-  const [selectedVideo, setSelectedVideo] = useState<Lesson | null>(null);
+  const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   useEffect(() => {
     if (item && item.lessons.length > 0) {
       const firstLesson = item.lessons[0];
       if (firstLesson) {
-          setSelectedVideo(firstLesson);
+          setSelectedLesson(firstLesson);
       }
     }
   }, [item]);
 
 
   const progress = useMemo(() => {
+    if(lessonsState.length === 0) return 0;
     const completedLessons = lessonsState.filter(l => l.completed).length;
     return Math.round((completedLessons / lessonsState.length) * 100);
   }, [lessonsState]);
@@ -47,7 +48,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
   const isCompleted = progress === 100;
 
   const handleLessonClick = (lesson: Lesson) => {
-    setSelectedVideo(lesson);
+    setSelectedLesson(lesson);
   };
   
   const handleMarkAsCompleted = (lessonId: number) => {
@@ -71,7 +72,54 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
     }
   }
 
-  const embedUrl = selectedVideo ? getYoutubeEmbedUrl(selectedVideo.url) : '';
+  const renderContent = () => {
+    if (!selectedLesson) {
+      return (
+        <div className="w-full h-full flex items-center justify-center bg-slate-200 rounded-xl">
+          <p>Selecione um conteúdo para começar.</p>
+        </div>
+      );
+    }
+  
+    const lessonType = selectedLesson.type || 'video';
+  
+    if (lessonType === 'pdf') {
+       if (!selectedLesson.url) {
+         return (
+            <div className="w-full h-full flex items-center justify-center bg-slate-200 rounded-xl">
+              <p>O link do PDF não está disponível no momento.</p>
+            </div>
+         )
+       }
+       return (
+        <iframe
+          src={selectedLesson.url}
+          title={selectedLesson.title}
+          className="w-full h-full"
+        />
+      );
+    }
+  
+    // Default to video
+    const embedUrl = getYoutubeEmbedUrl(selectedLesson.url);
+    if (!embedUrl) {
+      return (
+        <div className="w-full h-full flex items-center justify-center bg-slate-200 rounded-xl">
+          <p>Link do vídeo inválido.</p>
+        </div>
+      );
+    }
+    return (
+      <iframe
+        src={embedUrl}
+        title={selectedLesson.title}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full"
+      ></iframe>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground fade-in">
@@ -98,27 +146,14 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
           <div className="lg:col-span-2">
              <div className="mb-8">
               <div className="aspect-video relative rounded-xl overflow-hidden mb-2 shadow-lg bg-slate-200">
-                {embedUrl ? (
-                   <iframe
-                      src={embedUrl}
-                      title={selectedVideo?.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    ></iframe>
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <p>Selecione uma aula para começar.</p>
-                  </div>
-                )}
+                {renderContent()}
               </div>
-              {selectedVideo && (
+              {selectedLesson && (
                  <div className="flex justify-between items-center">
-                    <h2 className="text-2xl font-bold">{selectedVideo.title}</h2>
-                    <Button onClick={() => handleMarkAsCompleted(selectedVideo.id)}>
-                        {selectedVideo.completed ? <CheckCircle className="mr-2" /> : <PlayCircle className="mr-2" />}
-                        {selectedVideo.completed ? 'Marcar como não concluída' : 'Marcar como concluída'}
+                    <h2 className="text-2xl font-bold">{selectedLesson.title}</h2>
+                    <Button onClick={() => handleMarkAsCompleted(selectedLesson.id)}>
+                        {selectedLesson.completed ? <CheckCircle className="mr-2" /> : <PlayCircle className="mr-2" />}
+                        {selectedLesson.completed ? 'Marcar como não concluída' : 'Marcar como concluída'}
                     </Button>
                  </div>
               )}
@@ -148,8 +183,13 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                         <li key={lesson.id}>
                           <button 
                             onClick={() => handleLessonClick(lesson)}
-                            className={`w-full text-left p-3 rounded-md transition-colors flex items-center gap-3 ${selectedVideo?.id === lesson.id ? 'bg-primary/20 text-primary-foreground' : 'hover:bg-accent'}`}>
-                            {lesson.completed ? <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" /> : <PlayCircle className="h-5 w-5 text-primary flex-shrink-0" />}
+                            className={`w-full text-left p-3 rounded-md transition-colors flex items-center gap-3 ${selectedLesson?.id === lesson.id ? 'bg-primary/20 text-primary-foreground' : 'hover:bg-accent'}`}>
+                            
+                            {lesson.completed ? (
+                              <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                            ) : (
+                              (lesson.type === 'pdf' ? <FileText className="h-5 w-5 text-primary flex-shrink-0" /> : <PlayCircle className="h-5 w-5 text-primary flex-shrink-0" />)
+                            )}
                             <span>Aula {index + 1}: {lesson.title}</span>
                           </button>
                         </li>

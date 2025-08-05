@@ -5,6 +5,7 @@ export interface Lesson {
   duration?: string;
   url: string;
   completed: boolean;
+  type?: 'video' | 'pdf'; 
 }
 
 export interface ContentItem {
