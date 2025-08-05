@@ -153,7 +153,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'saboaria-lucrativa',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Saboaria Lucrativa', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Saboaria Lucrativa', url: 'https://drive.google.com/file/d/1hdxNYcYyD7j2bH1xUKPzE7rtBauCDJxo/preview', completed: false, type: 'pdf' },
     ],
   },
   {
@@ -164,7 +164,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'divulgacoes-e-vendas',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Divulgações e Vendas', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Divulgações e Vendas', url: 'https://drive.google.com/file/d/1sQxHZMRXdVSHltpVCEHR1u54czbMeY8z/preview', completed: false, type: 'pdf' },
     ],
   },
    {
@@ -175,7 +175,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'etiquetas-pra-imprimir',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Etiquetas Pra Imprimir', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Etiquetas Pra Imprimir', url: 'https://drive.google.com/file/d/12i-prpvmCs6SyFoXao7oMB0ub7BC_4vF/preview', completed: false, type: 'pdf' },
     ],
   },
    {
@@ -186,7 +186,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'robo-de-precificacao',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Robô de Precificação', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Robô de Precificação', url: 'https://drive.google.com/file/d/1tYBlDlFMq-EcxPOgHa2HN-v2TeeE7JVD/preview', completed: false, type: 'pdf' },
     ],
   },
      {
@@ -197,7 +197,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'produtos-para-pets',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Produtos For Pets', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Produtos For Pets', url: 'https://drive.google.com/file/d/1QewdEi8b4joOJy3BSC4cL9--WiXCuAnl/preview', completed: false, type: 'pdf' },
     ],
   },
    {
@@ -208,7 +208,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'receitas-de-condicionador',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Receitas de Condicionador', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Receitas de Condicionador', url: 'https://drive.google.com/file/d/1qjhn1W_cwpGwT6RKJPsvrgnzKWXCntYP/preview', completed: false, type: 'pdf' },
     ],
   },
    {
@@ -219,7 +219,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'lista-de-fornecedores',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Lista de Fornecedores', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Lista de Fornecedores', url: 'https://drive.google.com/file/d/1IyEoho-fV98ee9lkWMRrCUZKuXZUZNOO/preview', completed: false, type: 'pdf' },
     ],
   },
     {
@@ -230,7 +230,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'lista-de-materiais-da-vo-rita',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Lista de Materiais da Vó Rita', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Lista de Materiais da Vó Rita', url: 'https://drive.google.com/file/d/1o0qTMKgpO4CJOFEdybTGL-P2IpHztCl3/preview', completed: false, type: 'pdf' },
     ],
   },
     {
@@ -241,7 +241,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'saboaria-de-sucesso',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Saboaria de Sucesso', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Saboaria de Sucesso', url: 'https://drive.google.com/file/d/1R1TkyqlKiILwiG8-tUhohJYIUBGg5xXO/preview', completed: false, type: 'pdf' },
     ],
   },
    {
@@ -252,7 +252,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'receitas-de-cremes-hidratantes',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Receitas de Cremes Hidratantes', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Receitas de Cremes Hidratantes', url: 'https://drive.google.com/file/d/1kmveu7k-z9IaQKXH9IsP1yOe20YgEiF-/preview', completed: false, type: 'pdf' },
     ],
   },
     {
@@ -263,7 +263,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'desodorantes-naturais',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Desodorantes Naturais', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Desodorantes Naturais', url: 'https://drive.google.com/file/d/1_c_evEXyx5IveuYEVIHwN8wJVc4olDye/preview', completed: false, type: 'pdf' },
     ],
   },
    {
@@ -274,7 +274,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'sabonete-liquido',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Sabonete Liquido', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Sabonete Liquido', url: 'https://drive.google.com/file/d/1W08VYOn8N4u5SWtaKqfl5r9pGpyTiIao/preview', completed: false, type: 'pdf' },
     ],
   },
    {
@@ -285,7 +285,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'shampoo-artesanal',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Shampoo Artesanal', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Shampoo Artesanal', url: 'https://drive.google.com/file/d/1OVjbWQfp7dysEXQWiAZZfLm534aAzadJ/preview', completed: false, type: 'pdf' },
     ],
   },
   {
@@ -296,7 +296,7 @@ export const bonusContent: ContentItem[] = [
     slug: 'sabonetes-de-frutas-bonus',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Sabonetes de Frutas', url: '', completed: false, type: 'pdf' },
+      { id: 1, title: 'Sabonetes de Frutas', url: 'https://drive.google.com/file/d/1HJuw-TFZVTj7JLNox32RkGZSOPZ0DCYn/preview', completed: false, type: 'pdf' },
     ],
   },
 ];
