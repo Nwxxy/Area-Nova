@@ -1,3 +1,12 @@
+
+export interface Lesson {
+  id: number;
+  title: string;
+  duration?: string;
+  url: string;
+  completed: boolean;
+}
+
 export interface ContentItem {
   id: number;
   title: string;
@@ -5,9 +14,5 @@ export interface ContentItem {
   image: string;
   slug: string;
   progress: number;
-  lessons: {
-    id: number;
-    title: string;
-    duration: string;
-  }[];
+  lessons: Lesson[];
 }

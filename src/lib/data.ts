@@ -9,8 +9,11 @@ export const modules: ContentItem[] = [
     slug: 'comece-por-aqui',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Boas-vindas e Introdução', duration: '5 min' },
-      { id: 2, title: 'Materiais e Ferramentas Essenciais', duration: '15 min' },
+      { id: 1, title: 'O que é Saboaria Artesanal?', url: 'https://www.youtube.com/embed/yk6sqafus0Q', completed: false },
+      { id: 2, title: 'Tipos de Bases e Essências', url: 'https://www.youtube.com/embed/ijO5hZSOZB0', completed: false },
+      { id: 3, title: 'Corantes Naturais e Artificiais', url: 'https://www.youtube.com/embed/tNevZgGJXXE', completed: false },
+      { id: 4, title: 'Utensílios Usados na Saboaria', url: 'https://www.youtube.com/embed/2rHntZ5hhvI', completed: false },
+      { id: 5, title: 'Precificação', url: 'https://www.youtube.com/embed/iSvrd6j9zUE', completed: false },
     ],
   },
   {
@@ -21,8 +24,10 @@ export const modules: ContentItem[] = [
     slug: 'erros-comuns-na-saboaria',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Causas do Sabonete não Endurecer', duration: '10 min' },
-      { id: 2, title: 'Como Evitar a Separação de Fases', duration: '12 min' },
+      { id: 1, title: 'Introdução aos Erros Comuns na Saboaria', url: 'https://www.youtube.com/embed/x39O0bFVcqM', completed: false },
+      { id: 2, title: 'Ponto Certo da Base e Uso Correto das Essências', url: 'https://www.youtube.com/embed/KFG01L1nJOo', completed: false },
+      { id: 3, title: 'Sabonete Suando e Modo Correto de Secagem', url: 'https://www.youtube.com/embed/T3ZZAhqgiWg', completed: false },
+      { id: 4, title: 'Ressecamento e Falta de Espuma', url: 'https://www.youtube.com/embed/_eE288DcPNM', completed: false },
     ],
   },
   {
@@ -33,8 +38,9 @@ export const modules: ContentItem[] = [
     slug: 'seu-primeiro-sabonete',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Receita Simples de Azeite e Coco', duration: '20 min' },
-      { id: 2, title: 'O Processo de Cura e Teste de pH', duration: '10 min' },
+        { id: 1, title: 'Mão na Massa!', url: 'https://www.youtube.com/embed/vo0lwzl2aXA', completed: false },
+        { id: 2, title: 'Desenformando o Sabonete', url: 'https://www.youtube.com/embed/JRXCk7Uc8k4', completed: false },
+        { id: 3, title: 'Embalagem e Precificação', url: 'https://www.youtube.com/embed/fhmioW0P1aA', completed: false },
     ],
   },
   {
@@ -45,8 +51,10 @@ export const modules: ContentItem[] = [
     slug: 'sabonetes-decorativos',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Técnica de Swirl (Marmoreio)', duration: '18 min' },
-      { id: 2, title: 'Adicionando Camadas de Cores', duration: '15 min' },
+        { id: 1, title: 'Introdução', url: 'https://www.youtube.com/embed/KNVkPdK55d8', completed: false },
+        { id: 2, title: 'Fazendo o Sabonete Decorativo', url: 'https://www.youtube.com/embed/4NXL5wPwhCQ', completed: false },
+        { id: 3, title: 'Desenformando o Sabonete Decorativo', url: 'https://www.youtube.com/embed/w1XiezRfuDQ', completed: false },
+        { id: 4, title: 'Precificação', url: 'https://www.youtube.com/embed/4A97GuZ2aOI', completed: false },
     ],
   },
   {
@@ -57,8 +65,10 @@ export const modules: ContentItem[] = [
     slug: 'sabonetes-para-lembrancinhas',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Formatos e Moldes Especiais', duration: '12 min' },
-      { id: 2, title: 'Embalagens Criativas para Presentes', duration: '15 min' },
+        { id: 1, title: 'Introdução', url: 'https://www.youtube.com/embed/P8pktqeEpvQ', completed: false },
+        { id: 2, title: 'Fazendo Nosso Sabonete', url: 'https://www.youtube.com/embed/AylWaIgu778', completed: false },
+        { id: 3, title: 'Desenformando nosso Sabonete', url: 'https://www.youtube.com/embed/KfQxmbhokkY', completed: false },
+        { id: 4, title: 'Precificação', url: 'https://www.youtube.com/embed/oW1Pm-CO3fA', completed: false },
     ],
   },
   {
@@ -69,8 +79,10 @@ export const modules: ContentItem[] = [
     slug: 'sabonete-esfoliante',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Receita com Café e Aveia', duration: '18 min' },
-      { id: 2, title: 'Usando Sementes e Argilas', duration: '15 min' },
+        { id: 1, title: 'Introdução', url: 'https://www.youtube.com/embed/Osr2NNhg4YQ', completed: false },
+        { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/embed/biKY2p7dHrU', completed: false },
+        { id: 3, title: 'Desenformando', url: 'https://www.youtube.com/embed/BaUYrLlYNC0', completed: false },
+        { id: 4, title: 'Precificação', url: 'https://www.youtube.com/embed/fhtJ7Lns_sg', completed: false },
     ],
   },
   {
@@ -81,8 +93,10 @@ export const modules: ContentItem[] = [
     slug: 'sabonete-de-frutas',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Sabonete de Maracujá Calmante', duration: '20 min' },
-      { id: 2, title: 'Sabonete Cítrico Energizante', duration: '18 min' },
+        { id: 1, title: 'Introdução', url: 'https://www.youtube.com/embed/mCfs8uxxdGA', completed: false },
+        { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/embed/VaTMghE8Ugk', completed: false },
+        { id: 3, title: 'Desenformando e Embalando', url: 'https://www.youtube.com/embed/D8TZdIWv86A', completed: false },
+        { id: 4, title: 'Precificação', url: 'https://www.youtube.com/embed/xGE5VxrfdGs', completed: false },
     ],
   },
   {
@@ -93,8 +107,11 @@ export const modules: ContentItem[] = [
     slug: 'sabonete-fito-energetico',
     progress: 0,
     lessons: [
-      { id: 1, title: 'O que é Fitoenergética?', duration: '10 min' },
-      { id: 2, title: 'Receitas com Ervas para Limpeza e Proteção', duration: '22 min' },
+      { id: 1, title: 'Introdução', url: 'https://www.youtube.com/embed/CeSBrDagGRs', completed: false },
+      { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/embed/1Licryb1ik4', completed: false },
+      { id: 3, title: 'Aula Pratica', url: 'https://www.youtube.com/embed/1Licryb1ik4', completed: false },
+      { id: 4, title: 'Desenformando e Embalando', url: 'https://www.youtube.com/embed/1lzgaUJyaJI', completed: false },
+      { id: 5, title: 'Precificação', url: 'https://www.youtube.com/embed/dDQjI1COqe0', completed: false },
     ],
   },
   {
@@ -105,8 +122,10 @@ export const modules: ContentItem[] = [
     slug: 'sabonete-terapeutico',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Sabonete de Lavanda para Relaxamento', duration: '18 min' },
-      { id: 2, title: 'Sabonete de Melaleuca para Pele Oleosa', duration: '18 min' },
+        { id: 1, title: 'Introdução', url: 'https://www.youtube.com/embed/vfwcQQLlhog', completed: false },
+        { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/embed/Uf55mYcFb1Y', completed: false },
+        { id: 3, title: 'Desenformando e Embalando', url: 'https://www.youtube.com/embed/lSTVl3PQk18', completed: false },
+        { id: 4, title: 'Precificação', url: 'https://www.youtube.com/embed/KDKvMYRfBTQ', completed: false },
     ],
   },
   {
@@ -117,8 +136,10 @@ export const modules: ContentItem[] = [
     slug: 'sabonete-vegano',
     progress: 0,
     lessons: [
-      { id: 1, title: 'Substituindo Ingredientes de Origem Animal', duration: '15 min' },
-      { id: 2, title: 'Receita de Sabonete Vegano com Manteiga de Karité', duration: '20 min' },
+      { id: 1, title: 'Introdução', url: 'https://www.youtube.com/embed/u-NMGjMpDCg', completed: false },
+      { id: 2, title: 'Aula Pratica', url: 'https://www.youtube.com/embed/_lqbshzHVEg', completed: false },
+      { id: 3, title: 'Desenformando e Embalando', url: 'https://www.youtube.com/embed/zqmqxlvyXCI', completed: false },
+      { id: 4, title: 'Precificação', url: 'https://www.youtube.com/embed/hSttFBuI-jM', completed: false },
     ],
   },
 ];
@@ -132,9 +153,9 @@ export const bonusContent: ContentItem[] = [
     slug: 'embalagens-criativas',
     progress: 50,
     lessons: [
-      { id: 1, title: 'Técnicas de Embrulho com Tecido (Furoshiki)', duration: '12 min' },
-      { id: 2, title: 'Criação de Rótulos e Cintas de Papel', duration: '18 min' },
-      { id: 3, title: 'Caixas e Sacolas Personalizadas', duration: '15 min' },
+      { id: 1, title: 'Técnicas de Embrulho com Tecido (Furoshiki)', url: 'https://www.youtube.com/embed/placeholder', completed: false },
+      { id: 2, title: 'Criação de Rótulos e Cintas de Papel', url: 'https://www.youtube.com/embed/placeholder', completed: false },
+      { id: 3, title: 'Caixas e Sacolas Personalizadas', url: 'https://www.youtube.com/embed/placeholder', completed: false },
     ],
   },
   {
@@ -145,8 +166,8 @@ export const bonusContent: ContentItem[] = [
     slug: 'calculadora-de-saboaria',
     progress: 100,
     lessons: [
-        { id: 1, title: 'Entendendo a Calculadora', duration: '10 min' },
-        { id: 2, title: 'Simulando sua Primeira Receita', duration: '15 min' },
+        { id: 1, title: 'Entendendo a Calculadora', url: 'https://www.youtube.com/embed/placeholder', completed: false },
+        { id: 2, title: 'Simulando sua Primeira Receita', url: 'https://www.youtube.com/embed/placeholder', completed: false },
     ],
   },
   {
@@ -157,8 +178,8 @@ export const bonusContent: ContentItem[] = [
     slug: 'guia-de-fornecedores',
     progress: 0,
     lessons: [
-        { id: 1, title: 'Onde Comprar Óleos e Manteigas', duration: '8 min' },
-        { id: 2, title: 'Fornecedores de Embalagens e Moldes', duration: '8 min' },
+        { id: 1, title: 'Onde Comprar Óleos e Manteigas', url: 'https://www.youtube.com/embed/placeholder', completed: false },
+        { id: 2, title: 'Fornecedores de Embalagens e Moldes', url: 'https://www.youtube.com/embed/placeholder', completed: false },
     ],
   },
 ];
