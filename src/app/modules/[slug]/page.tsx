@@ -66,7 +66,10 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
         const videoId = urlObj.searchParams.get('v');
         return `https://www.youtube.com/embed/${videoId}`;
       }
-      return url; // Assume it's already an embed link
+       if (urlObj.hostname === 'www.youtube.com' && urlObj.pathname.startsWith('/embed/')) {
+        return url;
+      }
+      return url; // Assume it's already an embed link for other cases
     } catch (e) {
       return ''; // Invalid URL
     }
@@ -145,22 +148,12 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
       <main className="container mx-auto px-4 py-8 lg:py-12">
         {isBonus ? (
             <div className="max-w-7xl mx-auto">
-              <div className="aspect-video relative rounded-xl overflow-hidden mb-4 shadow-lg bg-slate-200 h-[calc(100vh-200px)]">
+               <div className="text-center mb-8">
+                <h2 className="text-3xl lg:text-4xl font-bold font-headline mb-2">{item.title}</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{item.description}</p>
+              </div>
+              <div className="aspect-video relative rounded-xl overflow-hidden shadow-lg bg-slate-200 h-[calc(100vh-300px)]">
                 {renderContent()}
-              </div>
-              <div className="flex justify-between items-center mb-6">
-                  {selectedLesson && <h2 className="text-2xl font-bold">{selectedLesson.title}</h2>}
-                  <div className="flex-grow"></div>
-                   {selectedLesson && (
-                    <Button onClick={() => handleMarkAsCompleted(selectedLesson.id)}>
-                        {selectedLesson.completed ? <CheckCircle className="mr-2" /> : <PlayCircle className="mr-2" />}
-                        {selectedLesson.completed ? 'Concluído' : 'Marcar como concluído'}
-                    </Button>
-                   )}
-              </div>
-              <div>
-                  <h2 className="text-2xl font-bold font-headline mb-4">Descrição do Conteúdo</h2>
-                  <p className="text-muted-foreground">{item.description}</p>
               </div>
             </div>
         ) : (
