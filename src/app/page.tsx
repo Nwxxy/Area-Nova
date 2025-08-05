@@ -7,7 +7,8 @@ import {
 } from '@/components/ui/carousel';
 import { ModuleCard } from '@/components/ModuleCard';
 import { modules, bonusContent } from '@/lib/data';
-import { Leaf } from 'lucide-react';
+import { Leaf, Mail, Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -73,9 +74,29 @@ export default function Home() {
         </section>
       </main>
       
-      <footer className="text-center p-6 text-muted-foreground border-t border-accent/30 mt-12">
-        <p>&copy; {new Date().getFullYear()} Saboaria da Vó Rita. Todos os direitos reservados.</p>
-      </footer>
+       <footer className="bg-background border-t border-accent/30 mt-12 py-8">
+          <div className="container mx-auto px-4 text-center text-muted-foreground">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <div className="flex flex-col gap-2 items-center md:items-start">
+                <h3 className="font-semibold text-foreground text-lg">Contato</h3>
+                <div className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <Mail className="h-4 w-4" />
+                  <a href="mailto:saboariadavorita@gmail.com">saboariadavorita@gmail.com</a>
+                </div>
+                <div className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <Phone className="h-4 w-4" />
+                  <a href="tel:+5561981913790">+55 61 98191-3790</a>
+                </div>
+              </div>
+              <div className="text-center">
+                 <p className="text-sm">&copy; {new Date().getFullYear()} Saboaria da Vó Rita. Todos os direitos reservados.</p>
+                 <Link href="/termos" className="text-sm hover:text-primary underline-offset-4 hover:underline">
+                    Termos de Uso e Política de Privacidade
+                  </Link>
+              </div>
+            </div>
+          </div>
+        </footer>
     </div>
   );
 }
