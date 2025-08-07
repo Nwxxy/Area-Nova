@@ -31,17 +31,19 @@ export default function Home() {
 
       <main className="flex-grow container mx-auto px-4 py-8 lg:py-12 fade-in">
         
-        <section className="mb-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl p-6 lg:p-10 border border-primary/30 shadow-2xl">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="aspect-video bg-foreground/10 rounded-xl flex items-center justify-center relative group overflow-hidden">
+        <section className="mb-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 lg:p-10 border border-primary/20 shadow-xl">
+          <div className="flex flex-col gap-8 items-center">
+             <div className="text-center">
+              <h2 className="text-3xl lg:text-4xl font-extrabold font-headline text-foreground mb-3">Dobre seu Faturamento com Saboaria: O Método Secreto para Escalar suas Vendas!</h2>
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">Descubra as estratégias comprovadas para transformar sua paixão em um negócio altamente lucrativo e conquistar clientes todos os dias.</p>
+            </div>
+            <div className="w-full max-w-4xl aspect-video bg-foreground/10 rounded-xl flex items-center justify-center relative group overflow-hidden shadow-lg">
                 <Image src="https://placehold.co/1280x720" alt="Upsell video thumbnail" fill={true} objectFit="cover" className="group-hover:scale-105 transition-transform duration-300" data-ai-hint="business presentation" />
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                     <PlayCircle className="w-20 h-20 text-white/80 group-hover:text-white transition-colors" />
                 </div>
             </div>
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl lg:text-4xl font-extrabold font-headline text-foreground mb-4">Dobre seu Faturamento com Saboaria: O Método Secreto para Escalar suas Vendas!</h2>
-              <p className="text-lg text-muted-foreground mb-6">Descubra as estratégias comprovadas para transformar sua paixão em um negócio altamente lucrativo e conquistar clientes todos os dias.</p>
+            <div className="text-center">
               <Button asChild size="lg" className="bg-peach-500 hover:bg-peach-600 text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 <Link href="#">
                   <Rocket className="mr-2"/>
@@ -70,8 +72,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="md:flex" />
-            <CarouselNext className="md:flex"/>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </section>
 
@@ -93,8 +95,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="md:flex" />
-            <CarouselNext className="md:flex" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </section>
       </main>
