@@ -27,7 +27,7 @@ export default function Home() {
         <p className="text-primary font-semibold text-xl mt-4">
           Parabéns pela sua compra! Prepare-se para lucrar com a saboaria artesanal.
         </p>
-        <p className="text-muted-foreground mt-2">
+        <p className="text-primary mt-2">
           Role a página para acessar suas aulas e materiais bônus.
         </p>
       </header>
