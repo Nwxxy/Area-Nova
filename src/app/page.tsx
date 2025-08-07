@@ -44,6 +44,7 @@ export default function Home() {
                   muted
                   loop
                   playsInline
+                  controls
                   className="w-full h-full object-cover"
                 />
             </div>
