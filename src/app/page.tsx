@@ -38,13 +38,14 @@ export default function Home() {
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto">Descubra as estratégias comprovadas para transformar sua paixão em um negócio altamente lucrativo e conquistar clientes todos os dias.</p>
             </div>
             <div className="w-full max-w-4xl aspect-video bg-foreground/10 rounded-xl flex items-center justify-center relative group overflow-hidden shadow-lg">
-                <Image src="https://placehold.co/1280x720" alt="Upsell video thumbnail" fill={true} objectFit="cover" className="group-hover:scale-105 transition-transform duration-300" data-ai-hint="business presentation" />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <PlayCircle className="w-20 h-20 text-white/80 group-hover:text-white transition-colors" />
-                </div>
+                <video
+                  src="https://www.dropbox.com/scl/fi/u0zfvs9cmqrg57dqnqqlt/Saboaria-Up-Feito-com-o-Clipchamp.mp4?rlkey=yvq5ib2xc8xa72se5mwujej5x&st=2wg58m3n&raw=1"
+                  controls
+                  className="w-full h-full object-cover"
+                />
             </div>
             <div className="text-center">
-              <Button asChild size="lg" className="bg-peach-500 hover:bg-peach-600 text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <Button asChild size="lg" className="bg-peach-500 hover:bg-peach-600 text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ring-4 ring-peach-500/30 hover:ring-peach-500/50">
                 <Link href="#">
                   <Rocket className="mr-2"/>
                   QUERO LUCRAR MAIS AGORA
@@ -72,8 +73,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="block md:hidden" />
+            <CarouselNext className="block md:hidden" />
           </Carousel>
         </section>
 
@@ -95,8 +96,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="block md:hidden"/>
+            <CarouselNext className="block md:hidden"/>
           </Carousel>
         </section>
       </main>
