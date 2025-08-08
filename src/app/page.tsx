@@ -37,8 +37,8 @@ export default function Home() {
         <section className="mb-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 lg:p-10 border border-primary/20 shadow-xl">
           <div className="flex flex-col gap-8 items-center">
              <div className="text-center">
-              <h2 className="text-3xl lg:text-4xl font-extrabold font-headline text-foreground mb-3">Dobre seu Faturamento com Saboaria: O Método Secreto para Escalar suas Vendas!</h2>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">Descubra as estratégias comprovadas para transformar sua paixão em um negócio altamente lucrativo e conquistar clientes todos os dias.</p>
+              <h2 className="text-3xl lg:text-4xl font-extrabold font-headline text-foreground mb-3">Você Já Sabe Fazer Sabão... Agora Tá na Hora de <span className="text-primary font-black">VENDER Como Gente Grande!</span></h2>
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">Descubra o método que tá fazendo artesãs <span className="font-bold text-foreground">dobrarem as vendas</span> sem sair de casa!</p>
             </div>
             <div className="w-full max-w-4xl aspect-video bg-foreground/10 rounded-xl flex items-center justify-center relative group overflow-hidden shadow-lg">
                 <video
@@ -52,10 +52,10 @@ export default function Home() {
                 />
             </div>
             <div className="text-center">
-              <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ring-4 ring-green-500/30 hover:ring-green-500/50 animate-pulse-strong">
+              <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ring-4 ring-green-500/30 hover:ring-green-500/50 animate-pulse-strong px-10 py-8 text-xl">
                 <Link href="#">
-                  <Rocket className="mr-2"/>
-                  QUERO LUCRAR MAIS AGORA
+                  <Rocket className="mr-3 h-6 w-6"/>
+                  QUERO ENTRAR AGORA ANTES QUE SAIA DO AR!
                 </Link>
               </Button>
             </div>
