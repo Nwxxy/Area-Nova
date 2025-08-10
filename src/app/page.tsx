@@ -38,7 +38,7 @@ export default function Home() {
           <div className="flex flex-col gap-8 items-center">
              <div className="text-center">
               <h2 className="text-3xl lg:text-4xl font-extrabold font-headline text-foreground mb-3">Você Já Sabe Fazer Sabão... Agora Tá na Hora de <span className="text-primary font-black">VENDER Como Gente Grande!</span></h2>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">Descubra o método que tá fazendo artesãs <span className="font-bold text-foreground">dobrarem as vendas</span> sem sair de casa!</p>
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">Descubra o método que tá fazendo artesãs <span className="font-bold text-green-500">dobrarem as vendas</span> sem sair de casa!</p>
             </div>
             <div className="w-full max-w-4xl aspect-video bg-foreground/10 rounded-xl flex items-center justify-center relative group overflow-hidden shadow-lg">
                 <video
