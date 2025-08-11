@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { modules, bonusContent } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, PlayCircle, CheckCircle, FileText } from 'lucide-react';
+import { ArrowLeft, PlayCircle, CheckCircle, FileText, Download } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -95,11 +95,26 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
          )
        }
        return (
-        <iframe
-          src={selectedLesson.url}
-          title={selectedLesson.title}
-          className="w-full h-full"
-        />
+        <div className="w-full h-full bg-slate-200 rounded-xl flex flex-col">
+          <div className="flex-grow hidden md:block">
+            <iframe
+              src={selectedLesson.url}
+              title={selectedLesson.title}
+              className="w-full h-full border-0"
+            />
+          </div>
+          <div className="flex md:hidden flex-col items-center justify-center h-full p-4 text-center">
+            <FileText className="h-16 w-16 text-primary mb-4" />
+            <h3 className="text-xl font-bold mb-2">{selectedLesson.title}</h3>
+            <p className="text-muted-foreground mb-4">A visualização de PDFs é melhor no computador. Clique no botão abaixo para baixar o arquivo.</p>
+            <Button asChild>
+              <a href={selectedLesson.url} target="_blank" rel="noopener noreferrer" download>
+                <Download className="mr-2 h-4 w-4"/>
+                Baixar PDF
+              </a>
+            </Button>
+          </div>
+        </div>
       );
     }
   
@@ -152,7 +167,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                 <h2 className="text-3xl lg:text-4xl font-bold font-headline mb-2">{item.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{item.description}</p>
               </div>
-              <div className="aspect-video relative rounded-xl overflow-hidden shadow-lg bg-slate-200 h-[calc(100vh-300px)]">
+              <div className="aspect-video relative rounded-xl overflow-hidden shadow-lg bg-slate-200 min-h-[250px] md:min-h-[calc(100vh-300px)]">
                 {renderContent()}
               </div>
             </div>
@@ -161,15 +176,15 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
             
             <div className="lg:col-span-2">
                <div className="mb-8">
-                <div className="aspect-video relative rounded-xl overflow-hidden mb-2 shadow-lg bg-slate-200">
+                <div className="aspect-video relative rounded-xl overflow-hidden mb-4 shadow-lg bg-slate-200 min-h-[250px]">
                   {renderContent()}
                 </div>
                 {selectedLesson && (
-                   <div className="flex justify-between items-center">
-                      <h2 className="text-2xl font-bold">{selectedLesson.title}</h2>
-                      <Button onClick={() => handleMarkAsCompleted(selectedLesson.id)}>
+                   <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                      <h2 className="text-xl md:text-2xl font-bold text-center md:text-left">{selectedLesson.title}</h2>
+                      <Button onClick={() => handleMarkAsCompleted(selectedLesson.id)} className="w-full md:w-auto">
                           {selectedLesson.completed ? <CheckCircle className="mr-2" /> : <PlayCircle className="mr-2" />}
-                          {selectedLesson.completed ? 'Marcar como não concluída' : 'Marcar como concluída'}
+                          {selectedLesson.completed ? 'Desmarcar' : 'Marcar como concluída'}
                       </Button>
                    </div>
                 )}
@@ -206,7 +221,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                               ) : (
                                 (lesson.type === 'pdf' ? <FileText className="h-5 w-5 text-primary flex-shrink-0" /> : <PlayCircle className="h-5 w-5 text-primary flex-shrink-0" />)
                               )}
-                              <span>Aula {index + 1}: {lesson.title}</span>
+                              <span className="flex-1">Aula {index + 1}: {lesson.title}</span>
                             </button>
                           </li>
                         ))}

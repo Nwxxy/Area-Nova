@@ -45,6 +45,7 @@ export default function Home() {
                   src="https://www.dropbox.com/scl/fi/u0zfvs9cmqrg57dqnqqlt/Saboaria-Up-Feito-com-o-Clipchamp.mp4?rlkey=yvq5ib2xc8xa72se5mwujej5x&st=2wg58m3n&raw=1"
                   autoPlay
                   loop
+                  muted
                   playsInline
                   controls
                   className="w-full h-full object-cover"
@@ -52,7 +53,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ring-4 ring-green-500/30 hover:ring-green-500/50 animate-pulse-strong px-10 py-8 text-xl">
-                <Link href="#">
+                <Link href="https://www.ggcheckout.com/checkout/v2/eTCxxdsm6ReC3a45pSxJ">
                   <Rocket className="mr-3 h-6 w-6"/>
                   QUERO ENTRAR AGORA ANTES QUE SAIA DO AR!
                 </Link>
@@ -79,8 +80,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="block md:hidden" />
-            <CarouselNext className="block md:hidden" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </section>
 
@@ -102,8 +103,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="block md:hidden"/>
-            <CarouselNext className="block md:hidden"/>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </section>
       </main>
