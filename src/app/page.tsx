@@ -45,7 +45,6 @@ export default function Home() {
                   src="https://www.dropbox.com/scl/fi/u0zfvs9cmqrg57dqnqqlt/Saboaria-Up-Feito-com-o-Clipchamp.mp4?rlkey=yvq5ib2xc8xa72se5mwujej5x&st=2wg58m3n&raw=1"
                   autoPlay
                   loop
-                  muted
                   playsInline
                   controls
                   className="w-full h-full object-cover"
